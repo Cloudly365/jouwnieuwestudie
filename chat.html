@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title></title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+
+  <body>
+    <style>
+        .TrengoWidgetLauncher__iframe {
+          display: none;
+        }
+        .trengo-shadow {
+          display: none;
+        }
+  
+        .TrengoWidgetPanel__iframe {
+          width: 100% !important;
+          height: 100% !important;
+          right: 0 !important;
+          bottom: 0 !important;
+          max-height: unset !important;
+          position: initial !important;
+        }
+  
+        .TrengoWidgetPanel__iframe {
+          width: 410px;
+          right: 20px;
+  
+          z-index: 2147483000;
+          transition:
+            opacity,
+            max-height 0.5s ease 0s;
+          box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16) !important;
+          border-radius: 10px !important;
+          bottom: 95px !important;
+          min-height: 250px !important;
+          max-height: unset !important;
+          overflow: hidden;
+        }
+  
+        @media only screen and (max-device-width: 480px) {
+          body {
+            position: initial !important;
+          }
+        }
+  
+        .TrengoWidgetLauncher__iframe {
+          display: none !important;
+        }
+  
+        .trengo-shadow {
+          background: radial-gradient(
+            ellipse at bottom right,
+            rgba(29, 39, 54, 0.16) 0,
+            rgba(29, 39, 54, 0) 0%
+          ) !important;
+        }
+      </style>
+      <script type="text/javascript">
+        window.Trengo = window.Trengo || {};
+        window.Trengo.key = "key_here";
+        window.Trengo.panelHeader = false;
+        window.Trengo.on_ready = function () {
+          window.Trengo.Api.Widget.open("chat");
+        };
+        (function (d, script, t) {
+          script = d.createElement("script");
+          script.type = "text/javascript";
+          script.async = true;
+          script.src = "https://static.widget.trengo.eu/embed.js";
+          d.getElementsByTagName("head")[0].appendChild(script);
+        })(document);
+      </script>
+  </body>
+</html>
